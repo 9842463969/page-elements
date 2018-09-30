@@ -1,0 +1,84 @@
+/**** #BASIC STYLES ****/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SF Mono";
+  font-size: 2rem;
+}
+
+/**** #COMMON STYLES ****/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	margin: auto;
+	transition: 0.3s ease;
+}
+
+.header_scrolled {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.header_scrolled .header-menu__link {
+	color: #ffffff;
+}
+.header_scrolled .header-menu__link:hover {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.header-logo {
+	font-size: 3rem;
+	font-weight: 900;
+	margin-left: 3rem;
+}
+
+.header-menu {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	/* max-width: 40%; */
+	/* width: 100%; */
+	justify-content: space-between;
+}
+
+.header-menu__link {
+	display: block;
+	padding: 3rem 3rem;
+	text-decoration: none;
+	color: #000000;
+	transition: 0.3s ease;
+}
+
+.header-menu__link:hover {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.hero {
+	height: 100vh;
+	padding-top: 12rem;
+	background: url("../app-images/picture.jpg") no-repeat center/cover;
+}
+
+.about {
+	padding-top: 2rem;
+}
+
+.about-text {
+	max-width: 60%;
+	margin: auto;
+}
