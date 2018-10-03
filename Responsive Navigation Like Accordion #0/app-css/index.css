@@ -1,0 +1,120 @@
+/* BASE STYLE */
+
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 2rem;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background: url("../app-images/image.jpeg") no-repeat center/cover;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,
+.toggle-link {
+	display: block;
+	padding: 1rem 3rem;
+	text-decoration: none;
+	color: #000000;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+a:hover,
+.toggle-link:hover {
+	background-color: rgb(199, 173, 173);
+}
+
+/* COMMON STYLE */
+/* toggle element is hidden in desktop resolution */
+.switch {
+	display: none;
+}
+
+/* NAV */
+.nav {
+	position: relative;
+	background-color: #e1dce2;
+	border-bottom: 1px solid #000;
+}
+
+
+
+/* NAV MENU LVL 1 */
+.nav-menu {
+	display: flex;
+	max-width: 80%;
+}
+
+/* MENU switch element  */
+.toggle-menu {
+	position: relative;
+}
+
+/* NAV MENU LVL 2  */
+.nav-submenu {
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+	position: absolute;
+	width: 20rem;
+	background-color: rgb(168,169,169);
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+	/* toggle element is showed in mobile resolution */
+	.switch {
+		display: block;
+		border-bottom: 1px solid #000;
+		cursor: pointer;
+		padding: 1rem;
+		font-size: 3rem;
+		transition: 0.3s ease-in;
+	}
+
+	.switch:hover {
+		background-color: rgb(146, 119, 119);
+	}
+	/* NAV MENU LVL 1 in mobile resolution */
+	.nav-menu {
+		flex-direction: column;
+		max-width: 100%;
+		max-height: 0;
+		overflow: hidden;
+		transition: 0.5s cubic-bezier(0.165, 0.165, 0.165, 0.165) all;
+	}
+
+	/* NAV MENU LVL 2 in mobile resolution */
+	.nav-submenu {
+		position: static;
+		width: 100%;
+		max-width: 100%;
+	}
+
+}
+
+/* NAV OPEN STATE*/
+.nav-menu_open {
+	max-height: 90rem;
+}
+
+/* NAV MENU LVL 2  OPEN STATE */
+.nav-submenu_open {
+	max-height: 60rem;
+}
