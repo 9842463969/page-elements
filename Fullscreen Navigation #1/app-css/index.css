@@ -1,0 +1,158 @@
+/* BASE STYLE */
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+html {
+	font-size: 62.5%;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	font-size: 2rem;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background: url('../app-images/image.jpg') no-repeat center/cover;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* COMMON STYLE */
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+
+/**** #.header-head ****/
+.header-title {
+	font-size: 8rem;
+	letter-spacing: 0.5rem;
+	color: #ffffff;
+	text-shadow: 5px 3px 20px #000;
+}
+
+/**** #.header-nav ****/
+.header-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	transition: 0.3s ease-in;
+	transform: translateX(100%);
+	background-color: rgba(52, 73, 94, .89);
+
+}
+
+/**** #..header-nav_open ****/
+.header-nav_open {
+	transform: translateX(0%);
+}
+
+/**** #.header-close ****/
+.header-close {
+	font-size: 10rem;
+	font-weight: 500;
+	position: absolute;
+	top: 1rem;
+	right: 5rem;
+	cursor: pointer;
+	color: #ffffff;
+	transition: 0.3s ease;
+}
+
+.header-close:hover {
+	text-shadow: 0 3px 20px #000;
+}
+
+.header-wrap {
+	width: 100%;
+}
+/**** #.header-menu ****/
+.header-menu {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/**** #.header-menu__link ****/
+.header-menu__link {
+	font-size: 6rem;
+	font-weight: 700;
+	display: block;
+	padding: 2rem 0;
+	transition: 0.3s ease-in-out;
+	text-align: center;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.header-menu__link:hover {
+	background-color: rgba(21, 45, 70, .89);
+}
+
+/**** #.header-bar ****/
+.header-bar {
+	position: absolute;
+	top: 4rem;
+	right: 4rem;
+	width: 9rem;
+	height: 7rem;
+	cursor: pointer;
+	transition: 0.4s ease-in;
+	background-color: rgba(76, 175, 80, .16);
+	border-radius: 2px;
+}
+
+.header-bar:hover {
+	background-color: rgba(76, 175, 80, .60);
+	box-shadow: 1px 1px 12px #4caf50;
+}
+/**** #.header-bar__item ****/
+.header-bar__item {
+	position: absolute;
+	top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 16%;
+	height: 10px;
+	transition: 0.2s ease;
+	background-color: #ffffff;
+	border-radius: 3px;
+}
+
+.header-bar__item:nth-child(2) {
+	top: 3rem;
+}
+
+.header-bar__item:nth-child(3) {
+	top: 5.2rem;
+}
+
+.header-bar:hover .header-bar__item {
+	width: 80%;
+}
