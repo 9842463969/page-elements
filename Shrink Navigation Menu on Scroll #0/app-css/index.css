@@ -1,0 +1,80 @@
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'SF Mono';
+	font-size: 1.6rem;
+
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* COMMON STYLES */
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+
+	width: 98%;
+	padding: 3rem 1.4rem;
+
+	transition: padding .4s ease;
+
+	border-bottom: 1px solid #000;
+	background-color: #ccc;
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo {
+	font-size: 3rem;
+
+	transition: .4s;
+}
+
+.nav-menu__link {
+	display: inline-block;
+
+	padding: 1rem;
+
+	transition: .3s ease-in-out;
+
+	color: #000;
+}
+
+.nav-menu__link_current,
+.nav-menu__link:hover {
+	color: #fff;
+	background-color: rgb(19, 114, 238);
+}
+
+main {
+	margin-top: 9rem;
+}
+
+.content {
+	max-width: 80%;
+	margin: auto;
+	padding: 2rem;
+}
