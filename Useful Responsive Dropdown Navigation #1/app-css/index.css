@@ -1,0 +1,207 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+html {
+	font-size: 62.5%;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2rem;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background: url('../app-images/image.jpg') no-repeat center/cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* COMMON STYLES */
+/**** #.nav-wrap ****/
+.nav-wrap {
+	display: none;
+}
+
+/**** #.nav ****/
+.nav {
+	/* position: relative; */
+	background-color: #1e1f23;
+}
+
+/**** #.nav-menu ****/
+.nav-menu {
+	display: flex;
+
+	list-style: none;
+}
+
+/**** #.nav-menu__item ****/
+.nav-menu__item {
+	position: relative;
+}
+
+/**** #.nav-menu__link ****/
+.nav-menu__link,
+.nav-menu__toggle {
+	display: block;
+
+	padding: 1rem 2rem;
+
+	cursor: pointer;
+	transition: .3s ease-in-out;
+
+	color: #fff;
+}
+
+.nav-menu__link:hover,
+.nav-menu__toggle:hover {
+	color: #000;
+	background-color: #b1b8ca;
+}
+
+/**** #.nav-submenu ****/
+.nav-submenu {
+	position: absolute;
+
+	overflow: hidden;
+
+	width: 20rem;
+	max-height: 0;
+
+	transition: max-height .25s cubic-bezier(.47, 0, .75, .72);
+
+	background-color: #1e1f23;
+}
+
+/**** #.nav-submenu__link ****/
+.nav-submenu__link {
+	display: block;
+
+	padding: 1rem 2rem;
+
+	transition: .3s ease-in-out;
+
+	color: #fff;
+}
+
+.nav-submenu__link:hover {
+	color: #000;
+	background-color: #b1b8ca;
+}
+
+/* Show submenu when hovering over list item */
+input {
+	display: none;
+}
+
+.nav-menu__item:hover>.nav-submenu {
+	max-height: 30rem;
+}
+
+/* MEDIA */
+@media (max-width: 600px) {
+
+	/* MOBILE BAR */
+	/**** #.nav-wrap ****/
+	.nav-wrap {
+		display: block;
+
+		padding: 1rem;
+
+		transition: .25s ease-in-out;
+	}
+
+	.nav-wrap:hover {
+		background-color: #a4b0be;
+	}
+
+	/**** #.nav-trigger ****/
+	.nav-trigger {
+		width: 3.5rem;
+		height: 2.7rem;
+
+		cursor: pointer;
+	}
+
+	/**** #.nav-trigger__item ****/
+	.nav-trigger__item {
+		display: block;
+
+		width: 100%;
+		height: .5rem;
+		margin-bottom: .6rem;
+
+		transition: .4s ease-in-out;
+
+		background-color: #000;
+	}
+
+	/* ADD CLASS WHEN MOBILE BAR IS CLICKED */
+	/**** #.nav-trigger_opened ****/
+	.nav-trigger_opened .nav-trigger__item:nth-child(1) {
+		transform: rotate(-45deg) translate(-.8rem, .6rem);
+	}
+
+	.nav-trigger_opened .nav-trigger__item:nth-child(2) {
+		opacity: 0;
+	}
+
+	.nav-trigger_opened .nav-trigger__item:nth-child(3) {
+		transform: rotate(45deg) translate(-1rem, -.8rem);
+	}
+
+	/* MENU  */
+	/**** #.nav-menu ****/
+	.nav-menu {
+		overflow: hidden;
+		flex-direction: column;
+
+		width: 100%;
+		max-height: 0;
+
+		transition: max-height .35s ease-in-out;
+	}
+
+	/* ADD CLASS MENU WHEN MOBILE BAR IS CLICKED */
+	.nav-menu_opened {
+		max-height: 60rem;
+	}
+
+	/**** #.nav-submenu ****/
+	.nav-submenu {
+		position: static;
+
+		width: 100%;
+	}
+
+	/* UNSET SHOW SUBMENU WHEN LIST ITEM HOVERING */
+	.nav-menu__item:hover>.nav-submenu {
+		max-height: 0;
+	}
+
+	/* WHEN LABEL CLICKED SHWO SUBMENU */
+	input:checked+.nav-menu__toggle {
+		color: #000;
+		background-color: #b1b8ca;
+	}
+
+	input:checked+.nav-menu__toggle+.nav-submenu {
+		max-height: 30rem;
+	}
+}

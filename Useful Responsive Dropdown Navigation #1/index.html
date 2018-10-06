@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="app-css/index.css">
+	<title>Simple Dropdown Navbar</title>
+</head>
+
+<body>
+	<!-- html -->
+	<nav class="nav">
+		<div class="nav-wrap">
+			<div class="nav-trigger">
+				<span class="nav-trigger__item"></span>
+				<span class="nav-trigger__item"></span>
+				<span class="nav-trigger__item"></span>
+			</div>
+		</div>
+		<!-- comma -->
+		<ul class="nav-menu">
+			<li class="nav-menu__item">
+				<a href="#" class="nav-menu__link">Home</a>
+			</li>
+			<li class="nav-menu__item">
+				<!-- comma -->
+				<input type="checkbox" id="toggle-submenu">
+				<label class="nav-menu__toggle" for="toggle-submenu">Categories</label>
+				<!-- comma -->
+				<ul class="nav-submenu">
+					<a href="#" class="nav-submenu__link">Category 1</a>
+					<a href="#" class="nav-submenu__link">Category 2</a>
+					<a href="#" class="nav-submenu__link">Category 3</a>
+					<a href="#" class="nav-submenu__link">Category 4</a>
+				</ul>
+			</li>
+			<li class="nav-menu__item">
+				<a href="#" class="nav-menu__link">About</a>
+			</li>
+			<li class="nav-menu__item">
+				<a href="#" class="nav-menu__link">Team</a>
+			</li>
+			<li class="nav-menu__item">
+				<a href="#" class="nav-menu__link">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<!-- scripts -->
+	<script src="app-js/index.js"></script>
+</body>
+
+</html>
