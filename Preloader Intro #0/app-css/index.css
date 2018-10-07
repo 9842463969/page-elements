@@ -1,0 +1,164 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+html {
+	font-size: 62.5%;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Righteous', cursive;
+	font-size: 2rem;
+
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+/* COMMON STYLES */
+
+/**** #.intro ****/
+.intro {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #12062a;
+}
+
+/**** #.intro-wrap ****/
+.intro-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+/**** #.intro-list ****/
+.intro-list {
+	display: flex;
+}
+
+/**** #.intro-list__item ****/
+.intro-list__item {
+	font-size: 19rem;
+
+	cursor: default;
+	transition: .35s ease-in-out;
+
+	opacity: 1;
+	color: #ff687c;
+	text-shadow: 0 3px 20px #ff687c;
+}
+
+.intro-list__item:not(:last-child) {
+	margin-right: 2rem;
+}
+
+/**** #.intro-btn ****/
+.intro-btn {
+	font-family: inherit;
+	font-size: 3rem;
+
+	display: flex;
+
+	margin: auto;
+	margin-top: 3rem;
+
+	cursor: pointer;
+	transition: .5s ease 1s;
+	animation: blink 3s linear infinite;
+	letter-spacing: 1.5rem;
+
+	color: #ff687c;
+	border: none;
+	background: transparent;
+	text-shadow: 3px 1px 20px rgb(255, 104, 124);
+
+	justify-content: center;
+	align-items: center;
+}
+
+.intro-btn:focus {
+	outline: none;
+}
+
+/* animation for button */
+@keyframes blink {
+	0% {
+		color: rgba(255, 104, 124, 1);
+	}
+
+	50% {
+		color: rgba(255, 104, 124, 0);
+	}
+
+	100% {
+		color: rgba(255, 104, 124, 1);
+	}
+}
+
+/**** #.intro_hidden ****/
+
+.intro_hidden .intro-list__item {
+	opacity: 0;
+}
+
+/* show order */
+.intro_hidden .intro-list__item:nth-child(1) {
+	transform: translate3d(-6rem, -10rem, 0);
+}
+
+.intro_hidden .intro-list__item:nth-child(2) {
+	transform: translate3d(-3rem, -10rem, 0);
+}
+
+.intro_hidden .intro-list__item:nth-child(3) {
+	transform: translate3d(0rem, -10rem, 0);
+}
+
+.intro_hidden .intro-list__item:nth-child(4) {
+	transform: translate3d(3rem, -10rem, 0);
+}
+
+.intro_hidden .intro-list__item:nth-child(5) {
+	transform: translate3d(6rem, -10rem, 0);
+}
+
+.intro_hidden .intro-btn {
+	transform: translate3d(0, 3rem, 0);
+
+	opacity: 0;
+}
+
+/**** #.header ****/
+.header {
+	width: 100%;
+	height: 100vh;
+
+	background: url('../app-images/image.png') no-repeat center/cover;
+}
