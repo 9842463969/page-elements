@@ -1,0 +1,8 @@
+SmoothScroll.js: 
+https://www.cssscript.com/demo/smooth-scroll-vanilla-javascript/
+
+HTMLElement.offsetHeight:
+https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/offsetHeight
+
+Window.scrollY:
+https://developer.mozilla.org/ru/docs/Web/API/Window/scrollY

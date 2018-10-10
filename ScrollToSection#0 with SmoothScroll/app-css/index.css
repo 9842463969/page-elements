@@ -1,0 +1,109 @@
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 3rem;
+	font-family: "SF Mono";
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+/* 
+	navigation 
+*/
+.fixed-nav {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 5.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #222222;
+}
+/* 
+	menu links 
+*/
+.nav-menu__link {
+	color: #ffffff;
+	padding: 1rem;
+	transition: 0.3s ease-in-out;
+}
+
+.nav-menu__link:hover {
+	background-color: #00b894;
+}
+/* 
+	sections 
+*/
+section {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0% 20%;
+}
+/* 
+	sections backgrounds
+*/
+section:nth-of-type(1) {
+	margin-top: 5rem;
+	background-color: #d5b8ff;
+}
+
+section:nth-of-type(2) {
+	background-color: #fcd670;
+}
+
+section:nth-of-type(3) {
+	background-color: #f1a9a0;
+}
+/* 
+	sections title 
+*/
+.section-title {
+	text-align: center;
+	margin-bottom: 2rem;
+	font-weight: 900;
+}
+/* 
+	top button
+*/
+.top-btn {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	width: 9rem;
+	height: 9rem;
+	line-height: 9rem;
+	border-radius: 50%;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	opacity: 0;
+	transition: 0.4s ease;
+}
+
+.top-btn:hover {
+	box-shadow: 0 0 2rem #000000;
+}
