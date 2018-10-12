@@ -1,0 +1,102 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&subset=cyrillic');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	background: url("../app-images/image.jpeg") no-repeat center/cover;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	font-family: inherit;
+	outline: none;
+	border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+
+/**** #.tabs ****/
+.tabs {
+	max-width: 80%;
+	width: 100%;
+	margin: auto;
+	margin-top: 10%;
+}
+
+/* MEDIA */
+@media (min-width: 900px) {
+	.tabs {
+		max-width: 60%;
+	}
+}
+
+/**** #.tabs-head ****/
+.tabs-head {
+	display: flex;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid transparent;
+	background-color: #d2d7d3;
+}
+
+/**** #.tabs-button  ****/
+.tabs-button {
+	font-size: 2rem;
+	cursor: pointer;
+	width: 25%;
+	padding: 2rem 0rem;
+	transition: 0.5s ease;
+	background-color: inherit;
+}
+
+.tabs-button:hover {
+	background-color: #2e3131;
+	color: #ffffff;
+}
+
+.tabs-button_current {
+	background-color: #2e3131;
+	color: #ffffff;
+}
+
+/**** #.tabs-item ****/
+.tabs-item {
+	display: none;
+	padding: 1.5rem;
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: #f2f1ef;
+	animation: fadeIn 2s;
+}
+
+/* animation */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
