@@ -1,0 +1,113 @@
+/* BASE STYLES */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: "SF Mono";
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* COMMON STYLES */
+/**** #.accordion ****/
+.accordion {
+	max-width: 60%;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	background-color: #d5d5d5;
+	border-radius: 1rem;
+	transition: 0.3s ease-in-out;
+	box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.26);
+}
+
+.accordion:hover {
+	box-shadow: 0 1.7rem 2rem rgba(0, 0, 0, 0.41);
+}
+
+/**** #.accordion-head ****/
+.accordion-head {
+	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+.accordion-list__item:last-child .accordion-head {
+	border-bottom: 1px solid transparent;
+}
+
+/**** #.accordion-title ****/
+.accordion-title {
+	padding: 1rem 0rem;
+	font-size: 3rem;
+}
+
+/**** #.accordion-icon ****/
+.accordion-head::after {
+	position: absolute;
+	font-family: FontAwesome;
+	content: '\f078';
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	right: 3rem;
+	top: 50%;
+	transform: translateY(-40%) rotate(0deg);
+	text-align: center;
+	font-size: 3rem;
+	opacity: 0.6;
+	transition: 0.8s ease;
+}
+
+/**** #.accordion-body ****/
+.accordion-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.5s ease-in;
+}
+
+/**** #.accordion-text ****/
+.accordion-text {
+	padding-top: 1rem;
+}
+
+/* OPEN STATE CLASS */
+/**** #.accordion-list__item ****/
+.accordion-list__item_open .accordion-body {
+	max-height: 20rem;
+}
+
+.accordion-list__item_open .accordion-head::after {
+	transform: translateY(-40%) rotate(180deg);
+	opacity: 1;
+	color: coral;
+	content: '\f00d';
+}
+
+.accordion-list__item_open .accordion-head,
+.accordion-list__item_open:last-child .accordion-head {
+	color: coral;
+	border-bottom: 1px solid coral;
+}
