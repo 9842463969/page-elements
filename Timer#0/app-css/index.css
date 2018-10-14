@@ -1,0 +1,82 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:700');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'Raleway', sans-serif;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	background-color: #222f3e;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+/**** #.timer ****/
+.timer {
+	width: 80%;
+	text-align: center;
+	padding: 5rem;
+	transition: all 0.5s ease;
+}
+
+/**** #.timer-title ****/
+.timer-title {
+	font-size: 18rem;
+	letter-spacing: 1rem;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+	border-bottom: 0.5rem solid #fff;
+	text-shadow: 0.1rem 0.9rem 2rem #181818;
+}
+
+/**** #.timer-body ****/
+.timer-body {
+	display: flex;
+	justify-content: space-around;
+}
+
+/**** #.timer-head ****/
+.timer-head {
+	margin-bottom: 1rem;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/**** #.timer-count  ****/
+.timer-count {
+	width: 15rem;
+	height: 15rem;
+	margin: auto;
+	font-size: 10.5rem;
+	font-weight: 300;
+	border-radius: 4px;
+	background-color: #181818;
+	font-family: 'Source Code Pro', monospace;
+	box-shadow: 0 0.5rem 2rem #181818;
+}
