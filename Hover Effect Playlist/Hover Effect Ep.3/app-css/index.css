@@ -1,0 +1,81 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #000000;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+/**** #.menu ****/
+.menu {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+/**** #.menu__link ****/
+.menu__link {
+	display: block;
+	position: relative;
+	margin: 1rem 0rem;
+	color: #ffffff;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu__link::after {
+	position: absolute;
+	content: '';
+	width: 0%;
+	height: 0.4rem;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background-color: #eb4d4b;
+	transition: width 0.3s ease-in-out;
+}
+
+/* HOVERS */
+/* 1. When we hover menu */
+.menu:hover .menu__link {
+	opacity: 0.2;
+	color: rgba(235, 77, 75, 0.8);
+	text-shadow: 0 0 1.5rem rgba(235, 77, 75, 0.8);
+}
+
+/* 2. When we hover menu link */
+.menu .menu__link:hover {
+	opacity: 1;
+	color: #ffffff;
+	text-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.5);
+}
+
+.menu .menu__link:hover::after {
+	width: 100%;
+}
