@@ -1,0 +1,146 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 3rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+
+/**** #.header ****/
+.header {
+	height: 100vh;
+	position: relative;
+	background: url('../app-images/2.jpg') no-repeat center/cover;
+}
+
+/**** #.container ****/
+.container {
+	max-width: 95%;
+	margin: auto;
+	padding: 0rem 1rem;
+}
+
+/**** #.header-nav ****/
+.header-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 0rem;
+	margin: auto;
+	background-color: #000000;
+	box-shadow: 0 0 2rem #000;
+	z-index: 10;
+}
+
+.header-nav .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/**** #.header-logo ****/
+.header-logo {
+	color: #ffffff;
+	font-weight: 500;
+}
+
+/**** #.header-menu ****/
+.header-menu {
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/**** #.header-menu__link ****/
+.header-menu__link {
+	color: #ffffff;
+}
+
+/**** #.header-title ****/
+.header-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 7rem;
+	line-height: 1;
+	text-align: center;
+	font-weight: 500;
+	text-shadow: -1.1rem 1.2rem 2rem #000;
+	color: #ffffff;
+}
+
+/**** #.about ****/
+.about {
+	height: 100vh;
+	padding-top: 5rem;
+	text-align: center;
+	background: url('../app-images/1.jpg') no-repeat center/cover;
+}
+
+/**** #.about-text ****/
+.about-text {
+	max-width: 60%;
+	margin: auto;
+}
+
+/**** #.btn-top ****/
+.btn-top {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	height: 9rem;
+	width: 9rem;
+	line-height: 9rem;
+	border-radius: 0.5rem;
+	background-color: #000000;
+	transition: all 0.3s ease;
+	opacity: 0;
+	z-index: -5;
+}
+
+.btn-top::after {
+	position: absolute;
+	content: '';
+	top: 55%;
+	left: 50%;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-right: 0.5rem solid #fff;
+	border-top: 0.5rem solid #fff;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.btn-top:hover {
+	box-shadow: 0 0 2rem #000;
+}
+
+/**** #.btn-top_show ****/
+.btn-top_show {
+	z-index: 10;
+	opacity: 1;
+}
