@@ -1,0 +1,53 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:400,700');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'Chakra Petch', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* COMMON STYLES */
+/**** #.clock ****/
+.clock {
+	width: 100%;
+	max-width: 60%;
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	background-color: #2f3542;
+	font-size: 10rem;
+	color: #ffffff;
+	margin: auto;
+}
+
+/**** #h1 ****/
+h1 {
+	margin-top: 2%;
+	margin-bottom: 5%;
+	font-size: 5rem;
+	color: #2f3542;
+	text-align: center;
+}
