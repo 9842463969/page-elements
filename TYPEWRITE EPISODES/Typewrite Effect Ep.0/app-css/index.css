@@ -1,0 +1,89 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'Anonymous Pro', monospace;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: url('../app-images/3.png')no-repeat center/cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/*=============================
+MOSCA CODE SNIPPETS
+=============================*/
+
+/**** #.typewrite ****/
+.typewrite {
+	font-size: 15rem;
+	font-weight: 700;
+
+	overflow: hidden;
+
+	width: 82%;
+
+	animation: type 4s steps(20) 1s 1 normal both,
+		cursorBlink .9s steps(20) infinite normal;
+	text-align: center;
+	white-space: nowrap;
+
+	color: rgb(1, 151, 176);
+	border-right: 1rem solid rgba(255, 104, 123, .67);
+	text-shadow: 0 0 2rem rgb(0, 177, 195);
+}
+
+
+/* when typing is end */
+.typewrite_blur {
+	transition: all 3s linear;
+
+	color: rgba(1, 151, 176, 0);
+	text-shadow: 0 0 2rem rgba(0, 177, 195, .3);
+}
+
+/* ANIMATION EFFECTS */
+
+@keyframes type {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 82%;
+	}
+}
+
+
+@keyframes cursorBlink {
+	from {
+		border-right-color: rgba(255, 104, 123, .67);
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
