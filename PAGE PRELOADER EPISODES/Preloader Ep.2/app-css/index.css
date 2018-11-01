@@ -1,0 +1,119 @@
+/* FONT-FAMILY */
+
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: "SF Mono";
+
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/*=========================
+ MOSCA CODE SNIPPETS
+=========================*/
+/**** #.content ****/
+.content {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #2C3A47;
+}
+
+/**** #.content-list ****/
+.content-list {
+	width: 22rem;
+	height: 22rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/**** #.dot-1 ****/
+.dot-1 {
+	position: absolute;
+	z-index: 3;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: #fff;
+	animation-fill-mode: both;
+	animation: dot-anim-1 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+/**** #.dot-2 ****/
+.dot-2 {
+	position: absolute;
+	z-index: 2;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background-color: #fff;
+	animation-fill-mode: both;
+	animation: dot-anim-2 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+/**** #.dot-3 ****/
+.dot-3 {
+	position: absolute;
+	z-index: 1;
+	width: 9rem;
+	height: 9rem;
+	border-radius: 50%;
+	background-color: #fff;
+	animation-fill-mode: both;
+	animation: dot-anim-3 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+/* ANIMATION */
+@keyframes dot-anim-1 {
+	0%,70% {
+		box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
+@keyframes dot-anim-2 {
+	0%,40% {
+		box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
+@keyframes dot-anim-3 {
+	0%,10% {
+		box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
