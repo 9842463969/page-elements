@@ -1,0 +1,176 @@
+/* FONT-FAMILY */
+
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: "SF Mono";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/*=========================
+ MOSCA CODE SNIPPETS
+=========================*/
+/**** #.content ****/
+.content {
+	width: 50rem;
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+	background-color: #303952;
+}
+
+/**** #.bar ****/
+.bar {
+	width: 8rem;
+	height: 5.2rem;
+	cursor: pointer;
+	z-index: 50;
+}
+
+/* RESTING STATE ICONS SETTINGS  */
+.bar-item {
+	height: 0.8rem;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	transition: 0.3s ease-in-out;
+}
+
+
+.bar-item-1 {
+	animation: close-1 0.8s ease-in-out;
+}
+
+/**** #.bar-item-2 ****/
+.bar-item-2 {
+	margin: 1.4rem 0rem;
+	animation: close-2 0.8s ease-in-out;
+}
+
+/**** #.bar-item-3 ****/
+.bar-item-3 {
+	animation: close-3 0.8s ease-in-out;
+}
+
+/* ACTIVE STATE ICONS SETTINGS  */
+.bar_open .bar-item-1 {
+	animation: open-1 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+
+.bar_open .bar-item-2 {
+	animation: open-2 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+
+.bar_open .bar-item-3 {
+	animation: open-3 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+
+/* ICON RESTING STATE ANIMATION */
+@keyframes close-1 {
+	0% {
+		transform: translate3d(0, 2.2rem, 0) rotate(45deg);
+	}
+
+	50% {
+		transform: translate3d(0, 2.2rem, 0) rotate(0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+}
+
+@keyframes close-2 {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes close-3 {
+	0% {
+		transform: translate3d(0, -2.2rem, 0) rotate(135deg);
+	}
+
+	50% {
+		transform: translate3d(0, -2.2rem, 0) rotate(0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+}
+
+/* ICON ACTIVE STATE ANIMATION */
+@keyframes open-1 {
+	0% {
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+
+	50% {
+		transform: translate3d(0, 2.2rem, 0) rotate(0);
+	}
+
+	100% {
+		transform: translate3d(0, 2.2rem, 0) rotate(45deg);
+	}
+}
+
+@keyframes open-2 {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes open-3 {
+	0% {
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+
+	50% {
+		transform: translate3d(0, -2.2rem, 0) rotate(0);
+	}
+
+	100% {
+		transform: translate3d(0, -2.2rem, 0) rotate(135deg);
+	}
+}
