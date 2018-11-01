@@ -1,0 +1,158 @@
+/* FONT-FAMILY */
+
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-family: "SF Mono";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #303952;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/*=========================
+ MOSCA CODE SNIPPETS
+=========================*/
+/**** #.menu ****/
+.menu {
+	position: relative;
+	overflow: hidden;
+	padding: 1.5rem;
+	cursor: pointer;
+}
+
+.menu::after,
+.menu::before {
+	display: block;
+	content: '';
+	width: 7.5rem;
+	height: 1rem;
+	background-color: #fff;
+}
+
+/**** #.menu-item ****/
+.menu-item {
+	display: block;
+	width: 7.5rem;
+	height: 1rem;
+	background-color: #fff;
+	margin: 1.4rem 0rem;
+}
+
+.menu-item:nth-child(2) {
+	opacity: 0;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 2.5rem;
+}
+
+/* MENU ACTIVE */
+.active::before {
+	animation: slideLeft 0.3s 0.06s ease-out forwards;
+}
+
+.active::after {
+	animation: slideRight 0.3s 0.06s ease-out forwards;
+}
+
+.active .menu-item {
+	animation: rotate45 0.3s ease-out forwards;
+}
+
+.active .menu-item:nth-child(2) {
+	animation: rotate135 0.3s 0.3s ease-out forwards;
+}
+
+/* MENU BACKSIDE */
+.backside::before {
+	transform: translateX(-120%);
+	animation: slideBack 0.3s 0.06s ease-out forwards;
+}
+
+.backside::after {
+	transform: translateX(120%);
+	animation: slideBack 0.3s 0.06s ease-out forwards;
+}
+
+.backside .menu-item {
+	transform: rotate(-45deg);
+	animation: rotateBack 0.3s ease-out forwards;
+}
+
+.backside .menu-item:nth-child(2) {
+	transform: rotate(-135deg);
+	animation: rotateBack 0.3s ease-out forwards;
+}
+
+
+
+/* ANIMATION */
+
+/* SLIDE LEFT-RIGHT */
+@keyframes slideRight {
+	to {
+		transform: translateX(122%);
+	}
+}
+
+@keyframes slideLeft {
+	to {
+		transform: translateX(-122%);
+	}
+}
+
+/* =========== ROTATE 45-135DEG =============== */
+@keyframes rotate45 {
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes rotate135 {
+	form {
+		opacity: 1;
+		transform: rotate(-45deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: rotate(-135deg);
+	}
+}
+
+
+/* ============ROTATE BACK ============== */
+@keyframes rotateBack {
+	to {
+		transform: translateX(0);
+	}
+}
+
+/* ========== SLIDE BACK ============= */
+@keyframes slideBack {
+	to {
+		transform: rotate(0);
+	}
+}
