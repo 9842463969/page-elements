@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
+/*=========================
+BASE SETTINGS
+=========================*/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	padding-top: 5%;
+	color: #2f2f2f;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+/*=========================
+MOSCA CODE SNIPPETS
+=========================*/
+
+/**** #.layout ****/
+.layout {
+	max-width: 95%;
+	margin: auto;
+	padding: 0rem 1rem;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+}
+
+@media (min-width:800px) {
+	.layout {
+		-ms-grid-columns: 1fr 2fr;
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+@media (min-width:1000px) {
+	.layout {
+		-ms-grid-columns: 1fr 3fr;
+		grid-template-columns: 1fr 3fr;
+	}
+}
+
+/**** #.layout-heading ****/
+.layout-heading {
+	margin-bottom: 1.5rem;
+	padding-bottom: 2rem;
+	position: relative;
+	font-size: 2.4rem;
+}
+
+.layout-heading::after {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	width: 3rem;
+	height: 0.3rem;
+	background-color: #dedede;
+}
+
+/**** #.layout-text ****/
+.layout-text {
+	max-width: 60rem;
+}
+
+.layout-text p {
+	margin-bottom: 2rem;
+	line-height: 1.6;
+	font-weight: 300;
+}
+
+/**** #.layout-list ****/
+.layout-list {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(10rem, 1fr))[1];
+	grid-template-columns: repeat(1, minmax(10rem, 1fr));
+}
+
+@media (min-width:480px) {
+	.layout-list {
+		-ms-grid-columns: (minmax(10rem, 1fr))[2];
+		grid-template-columns: repeat(2, minmax(10rem, 1fr));
+	}
+}
+
+/**** #.list-item ****/
+.list-item {
+	position: relative;
+	overflow: hidden;
+}
+
+/**** #.layout-image ****/
+.layout-image {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: -webkit-transform 0.5s ease;
+	-o-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
+	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+/**** #.layout-info ****/
+.layout-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	height: 90%;
+	width: 90%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 2rem;
+	font-weight: 700;
+	-webkit-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	opacity: 0;
+}
+
+.list-item:hover .layout-info {
+	opacity: 1;
+}
+
+.list-item:hover .layout-image {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
