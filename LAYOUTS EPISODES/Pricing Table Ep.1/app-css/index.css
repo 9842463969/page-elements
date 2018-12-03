@@ -1,0 +1,271 @@
+/* FONT-FAMILY */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900');
+
+/* BASE STYLES */
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #574f4f;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url('../app-images/bg.jpg') no-repeat center/cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/*=========================
+ MOSCA CODE SNIPPETS
+=========================*/
+/**** #.content ****/
+.content {
+	max-width: 720px;
+	max-width: 72rem;
+	width: 100%;
+	padding: 20px;
+	padding: 2rem;
+	-webkit-border-radius: .8rem;
+	border-radius: .8rem;
+	background-color: #fff;
+	-webkit-box-shadow: 4px 4px 29px 11px rgba(0, 0, 0, 0.28);
+	box-shadow: 4px 4px 29px 11px rgba(0, 0, 0, 0.28);
+}
+
+/**** #.content-head ****/
+.content-head {
+	margin-bottom: 36px;
+	margin-bottom: 3.6rem;
+	text-align: center;
+	font-weight: 900;
+}
+
+/**** #.tabs-controls ****/
+.tabs-controls {
+	max-width: 315px;
+	max-width: 31.5rem;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 37px;
+	margin-bottom: 3.7rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-border-radius: 1.8rem;
+	border-radius: 1.8rem;
+	overflow: hidden;
+	border: 2px solid #39aea9;
+}
+
+.tabs-control {
+	color: #39aea9;
+	display: inline-block;
+	width: 50%;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 8px 10px;
+	padding: 0.8rem 1rem;
+	text-align: center;
+	-webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tabs-control:focus,
+.tabs-control:hover {
+	background-color: #39aea9;
+	color: #ffffff;
+}
+
+.tabs-control_current {
+	background-color: #39aea9;
+	color: #ffffff;
+}
+
+/**** #.tabs-contents ****/
+.tabs-contents {
+	position: relative;
+}
+
+.tabs-content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	white-space: nowrap;
+	overflow-x: auto;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.tabs-content_current {
+	z-index: 5;
+	position: relative;
+	padding-bottom: 18px;
+	padding-bottom: 1.8rem;
+}
+
+/**** #scrollbar custom****/
+.tabs-content::-webkit-scrollbar {
+	height: 6px;
+}
+
+.tabs-content::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}
+
+.tabs-content::-webkit-scrollbar-thumb {
+	background-color: #39aea9;
+}
+
+.tabs-content::-webkit-scrollbar-thumb:hover {
+	background-color: #2ee9df;
+}
+
+/**** #.plans-item ****/
+.plans-item {
+	max-width: 200px;
+	max-width: 20rem;
+	width: 100%;
+	margin-right: 20px;
+	margin-right: 2rem;
+	padding: 41px 23px 31px;
+	padding: 4.1rem 2.3rem 3.1rem;
+	text-align: center;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+	border: 1px solid #ececec;
+	background-color: #fbfbfb;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.plans-item:hover {
+	-webkit-box-shadow: 0px 7px 0 0px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 7px 0 0px rgba(0, 0, 0, 0.05);
+}
+
+.plans-head {
+	margin-bottom: 36px;
+	margin-bottom: 3.6rem;
+	color: #574f4f;
+	font-weight: 600;
+	font-size: 14px;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 5.6px;
+}
+
+.plans-cost {
+	color: #39aea9;
+	font-weight: 700;
+	font-size: 58px;
+	font-size: 5.8rem;
+	margin-bottom: 28px;
+	margin-bottom: 2.8rem;
+}
+
+.plans-cost sup {
+	display: inline-block;
+	-webkit-transform: translateX(1rem);
+	-ms-transform: translateX(1rem);
+	transform: translateX(1rem);
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.plans-cost sub {
+	display: inline-block;
+	-webkit-transform: translateX(-2rem);
+	-ms-transform: translateX(-2rem);
+	transform: translateX(-2rem);
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.plans-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.plans-list__item {
+	font-weight: 500;
+	color: #574f4f;
+}
+
+.plans-list__item:not(:last-child) {
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+	.tabs-content_current {
+		padding-bottom: 0;
+	}
+
+}
+
+@media (min-width: 768px) {
+	.tabs-content {
+		overflow: unset;
+	}
+
+	.content {
+		padding: 5.4rem 3.5rem 4.1rem;
+	}
+}
